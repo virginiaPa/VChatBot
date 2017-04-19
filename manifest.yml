@@ -1,17 +1,7 @@
 applications:
-- path: target/JavaHelloWorldApp.war
-  memory: 512M
-  instances: 1
-  domain: mybluemix.net
-  name: VChatBot
-  host: VChatBot
-  disk_quota: 1024M
+- name: VChatBot
+  path: target/Chatbot-0.0.1.war
   buildpack: liberty-for-java
-  services:
-  - Speech to Text-y5
-  - Conversation-oc
-  - Text to Speech-7q
-  env: 
-  CONVERSATION_WORKSPACE_ID: debaf637-fd77-4d57-bd1f-2cda24bd1069
-  CAR_SERVICE_HOST: VChatBot.mybluemix.net
-   
+  env:
+    CONVERSATION_WORKSPACE_ID: debaf637-fd77-4d57-bd1f-2cda24bd1069
+    CAR_SERVICE_HOST: VChatBot.mybluemix.net
