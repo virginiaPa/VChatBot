@@ -1,0 +1,12 @@
+applications:
+- path: target/JavaHelloWorldApp.war
+  memory: 512M
+  instances: 1
+  domain: mybluemix.net
+  name: VChatBot
+  host: VChatBot
+  disk_quota: 1024M
+  services:
+  - Speech to Text-y5
+  - Conversation-oc
+  - Text to Speech-7q
